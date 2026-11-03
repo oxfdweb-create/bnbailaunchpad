@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Create and shape BNB Chain token concepts with the BNB AI Launchpad assistant.">
+  <link rel="canonical" href="https://bnbailaunchpad.in/">
+  <title>BNB AI Launchpad — AI Token Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><img src="bnb-ai-emblem.png" alt="BNB AI Launchpad emblem"><span>BNB <b>AI</b> <em>LAUNCHPAD</em></span></a>
+    <nav class="desktop-nav"><a href="#studio">AI Token Studio</a><a href="#process">How it works</a><a href="#safety">Safety</a></nav>
+    <button class="wallet-btn" id="walletButton"><span class="wallet-dot"></span><span id="walletLabel">Connect Wallet</span></button>
+    <button class="menu-btn" id="menuButton" aria-label="Open menu">☰</button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav"><a href="#studio">AI Token Studio</a><a href="#process">How it works</a><a href="#safety">Safety</a></nav>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> AI-POWERED TOKEN CREATION ON BNB CHAIN</div>
+        <h1>Turn your idea<br>into a <span>token concept.</span></h1>
+        <p class="hero-text">Shape a token idea with an AI-assisted launch brief. Create a name, ticker, project story, utility outline and launch checklist before you go onchain.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#studio">Open AI Token Studio <span>↘</span></a><a class="secondary-btn" href="#process">How it works</a></div>
+        <div class="hero-proof"><span class="proof-mark">✦</span><span>Build your concept first. Review everything before any onchain action.</span></div>
+      </div>
+      <div class="hero-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="hero-core"><img src="bnb-ai-emblem.png" alt=""/><div class="core-label">BNB <b>AI</b></div><small>IDEAS TO ONCHAIN</small></div><div class="float-card float-top"><span class="mini-icon">✦</span><div><b>AI Token Studio</b><small>Concept builder</small></div><span class="live-tag">BETA</span></div><div class="float-card float-bottom"><span class="chain-icon">⬡</span><div><b>BNB Smart Chain</b><small>Mainnet selected</small></div><span class="check">✓</span></div><div class="spark spark-one">✦</div><div class="spark spark-two">✧</div></div>
+    </section>
+
+    <section class="stats section-wrap">
+      <div class="stat"><span class="stat-label">NETWORK</span><strong>BNB Smart Chain</strong><small>Mainnet · Chain ID 56</small></div>
+      <div class="stat"><span class="stat-label">CORE PRODUCT</span><strong>AI Token Studio</strong><small>Names · Story · Utility · Brief</small></div>
+      <div class="stat"><span class="stat-label">CURRENT MODE</span><strong><i class="status-dot"></i> Frontend Preview</strong><small>No token deployment enabled</small></div>
+    </section>
+
+    <section class="section-wrap studio-section" id="studio">
+      <div class="section-heading"><div><div class="eyebrow">YOUR TOKEN STARTS HERE</div><h2>AI Token <span>Studio.</span></h2><p class="section-intro">Describe your idea and prepare a detailed prompt for the AI generation service.</p></div><span class="tag">AI BACKEND CONNECTION PENDING</span></div>
+      <div class="studio-grid">
+        <form class="studio-form" id="ideaForm">
+          <label for="idea">What's your token idea?</label>
+          <textarea id="idea" rows="4" maxlength="500" placeholder="Example: A community token that rewards people who share useful AI tools..." required></textarea>
+          <div class="form-row"><div><label for="style">Brand personality</label><select id="style"><option>Futuristic</option><option>Funny and meme-inspired</option><option>Premium and elegant</option><option>Community-first</option><option>Minimal and professional</option></select></div><div><label for="purpose">Token purpose</label><select id="purpose"><option>Community</option><option>Utility</option><option>AI ecosystem</option><option>Gaming</option><option>Creator rewards</option></select></div></div>
+          <div class="form-row"><div><label for="ticker">Preferred ticker (optional)</label><input id="ticker" maxlength="10" placeholder="e.g. BNAI"></div><div><label for="supply">Target supply (optional)</label><input id="supply" inputmode="numeric" placeholder="e.g. 1000000000"></div></div>
+          <button class="primary-btn generate-btn" type="submit">Prepare AI launch brief <span>✦</span></button>
+          <p class="form-hint">Preview mode: this prepares a structured AI prompt locally. A secure AI service must be connected to generate live results.</p>
+        </form>
+        <div class="output-panel" aria-live="polite">
+          <div class="panel-header"><span class="agent-avatar">✳</span><div><b>Launchpad AI Assistant</b><small><i class="status-dot"></i> Prompt builder preview</small></div><span class="panel-menu">•••</span></div>
+          <div class="output-empty" id="outputEmpty"><div class="empty-icon">✧</div><h3>Your launch brief will appear here</h3><p>Enter your idea and select “Prepare AI launch brief”.</p></div>
+          <div class="output-result" id="outputResult" hidden><div class="result-label">AI GENERATION PROMPT</div><pre id="promptOutput"></pre><button class="small-primary" id="copyPrompt" type="button">Copy AI prompt ↗</button></div>
+          <div class="panel-foot">No API key is stored in this website. Live AI generation will be connected through a secure backend.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="process"><div class="section-wrap section-block"><div class="center-heading"><div class="eyebrow">FROM IDEA TO LAUNCH PLAN</div><h2>A clearer path to <span>token creation.</span></h2><p>Start with a concept, review it carefully, then prepare for onchain development.</p></div><div class="steps"><div class="step"><div class="step-number">01</div><div class="step-icon">✧</div><h3>Describe</h3><p>Tell the AI assistant about your project, audience and intended purpose.</p></div><div class="step-line"></div><div class="step"><div class="step-number">02</div><div class="step-icon">✦</div><h3>Generate</h3><p>Prepare names, ticker ideas, project description and a launch checklist.</p></div><div class="step-line"></div><div class="step"><div class="step-number">03</div><div class="step-icon">⬡</div><h3>Review</h3><p>Check token details, legal considerations and contract security before launch.</p></div></div></div></section>
+
+    <section class="section-wrap safety-section" id="safety"><div class="safety-card"><div class="safety-icon">盾</div><div><div class="eyebrow">SAFETY FIRST</div><h2>AI suggestions are <span>not guarantees.</span></h2><p>AI-generated names, descriptions and tokenomics may be inaccurate. Review all outputs independently. This preview does not deploy tokens, create liquidity, collect funds or execute transactions. Never share a seed phrase or private key.</p></div></div></section>
+
+    <section class="section-wrap cta-section"><div class="cta-card"><div class="cta-glow"></div><div class="eyebrow">BUILT FOR BNB CHAIN BUILDERS</div><h2>Your next token idea starts <span>here.</span></h2><p>Start shaping your token concept with BNB AI Launchpad.</p><a class="primary-btn" href="#studio">Create a launch brief <span>↗</span></a></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home"><img src="bnb-ai-emblem.png" alt=""><span>BNB <b>AI</b> <em>LAUNCHPAD</em></span></a><span>© 2026 BNB AI Launchpad · Independent community project · Not affiliated with Binance</span><div><a href="#process">How it works</a><a href="#safety">Safety</a></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
