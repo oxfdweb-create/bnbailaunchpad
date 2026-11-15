@@ -96,3 +96,19 @@ if (copyTokenButton) {
     }
   });
 }
+// BNB AI Launchpad Token Preview
+document.getElementById('previewToken')?.addEventListener('click', () => {
+  const name = document.getElementById('tokenName').value.trim();
+  const symbol = document.getElementById('tokenSymbol').value.trim();
+  const supply = document.getElementById('tokenSupply').value.trim();
+  const preview = document.getElementById('tokenPreview');
+
+  if (!name || !/^[a-zA-Z0-9]{2,11}$/.test(symbol) ||
+      !Number.isSafeInteger(Number(supply)) || Number(supply) <= 0) {
+    preview.textContent = 'Please enter valid token details.';
+    return;
+  }
+
+  preview.textContent =
+    `Token: ${name} (${symbol.toUpperCase()}) | Supply: ${Number(supply).toLocaleString()}`;
+});
