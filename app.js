@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('previewToken');
+
+  if (!button) return;
+
+  button.addEventListener('click', function () {
+    const name = document.getElementById('tokenName').value.trim();
+    const symbol = document.getElementById('tokenSymbol').value.trim();
+    const supply = Number(document.getElementById('tokenSupply').value);
+    const output = document.getElementById('tokenPreview');
+
+    if (!name || !/^[a-zA-Z0-9]{2,11}$/.test(symbol) ||
+        !Number.isSafeInteger(supply) || supply <= 0) {
+      output.textContent = 'Please enter valid token details.';
+      return;
+    }
+
+    output.textContent =
+      'Token: ' + name + ' (' + symbol.toUpperCase() +
+      ') | Supply: ' + supply.toLocaleString('en-US');
+  });
+});
+
 const walletButton = document.getElementById('walletButton');
 const walletLabel = document.getElementById('walletLabel');
 const toast = document.getElementById('toast');
