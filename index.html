@@ -109,7 +109,31 @@
       <div class="agent-copy"><div class="eyebrow">YOUR WEB3 COPILOT</div><h2>Meet your <span>AI agent.</span></h2><p>Generate a starter prompt for an AI assistant to help research a project, explain token details or prepare a launch checklist.</p><div class="agent-points"><span>✓ Project research prompts</span><span>✓ Token launch checklist</span><span>✓ Wallet safety reminders</span></div></div>
       <div class="agent-panel"><div class="panel-header"><span class="agent-avatar">✳</span><div><b>Launchpad Assistant</b><small><i class="status-dot"></i> Prompt builder preview</small></div><span class="panel-menu">•••</span></div><div class="chat-bubble">Hi! What would you like to explore today?</div><div class="prompt-chips"><button data-prompt="Research a BNB Chain project and list its team, utility, risks and official links.">Research a project</button><button data-prompt="Create a safe token launch checklist for BNB Smart Chain, including contract verification and liquidity considerations.">Launch checklist</button><button data-prompt="Explain how to check a token contract, ownership permissions, liquidity and common scam risks.">Check token safety</button></div><textarea id="agentPrompt" placeholder="Choose a prompt above or write your own..." rows="3"></textarea><div class="panel-actions"><span>Preview only · No AI API connected</span><button class="small-primary" id="copyPrompt">Copy prompt ↗</button></div></div>
     </section>
+<section class="section-wrap section-block" id="create">
+  <div class="section-heading">
+    <div class="eyebrow">BNB SMART CHAIN</div>
+    <h2>Create Your <span>Token</span></h2>
+  </div>
 
+  <div class="token-card">
+    <h3>BE P-20 Token Creator</h3>
+
+    <label>Token Name</label>
+    <input id="tokenName" type="text" placeholder="Enter token name">
+
+    <label>Token Symbol</label>
+    <input id="tokenSymbol" type="text" placeholder="Example: BNAI">
+
+    <label>Total Supply</label>
+    <input id="tokenSupply" type="number" placeholder="1000000000">
+
+    <button type="button" id="previewToken">
+      Preview Token
+    </button>
+
+    <p id="tokenPreview"></p>
+  </div>
+</section>
     <section class="mint-section"><div class="section-wrap mint-inner"><div><div class="eyebrow">ONCHAIN FEATURES</div><h2>Ready when <span>you are.</span></h2><p>Token minting and launch participation will be enabled after a smart contract is deployed, reviewed and connected.</p></div><div class="mint-box"><div class="mint-box-head"><span class="project-icon icon-gold">✳</span><span class="tag tag-muted">PREVIEW MODE</span></div><h3>Token launch module</h3><div class="mint-row"><span>Network</span><b>BNB Smart Chain</b></div><div class="mint-row"><span>Contract</span><b>Not connected</b></div><button class="disabled-btn" disabled>Minting unavailable</button><small>No transaction will be submitted in this preview.</small></div></div></section>
 
     <section class="section-wrap cta-section"><div class="cta-card"><div class="cta-glow"></div><div class="eyebrow">BUILD THE FUTURE WITH US</div><h2>Your next idea starts <span>here.</span></h2><p>Explore the ecosystem and get ready for the next wave of AI on BNB Chain.</p><a class="primary-btn" href="#explore">Explore launchpad <span>↗</span></a></div></section>
